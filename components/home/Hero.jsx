@@ -1,10 +1,10 @@
 import React from "react";
-import Background1 from "../images/Background 1.png";
-import Background2 from "../images/Background 2.png";
+import Background1 from "./Background 1.png";
+import Background2 from "./Background 2.png"
 
 const Hero = () => {
   return (
-    <div className="w-screen bg-emerald-800">
+    <div className="w-screen ">
       <div className="relative w-full bg-white overflow-hidden h-[500px] md:h-[410px]">
         {/* Background Image */}
         <img
@@ -28,7 +28,7 @@ const Hero = () => {
             <img
               src={Background2}
               alt="Person"
-              className="w-64 h-64 sm:w-72 sm:h-72 md:w-96 md:h-96 object-contain"
+              className="w-64 h-64 sm:w-72 sm:h-72 mt-2 md:w-96 md:h-96 object-contain"
             />
           </div>
         </div>
