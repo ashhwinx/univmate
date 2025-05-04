@@ -104,7 +104,7 @@ const Signup = () => {
                     required 
                     value={semester}
                     onChange={ (e)=> {
-                      setSemester(e.target.value)                      
+                      setSemester(e.target.value)               
                     }}
                      className="w-full h-8 bg-white text-[15px] rounded-sm outline-none p-1 mb-4">
                       <option value="" disabled selected hidden>Select Semester</option>
