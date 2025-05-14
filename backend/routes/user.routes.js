@@ -15,6 +15,7 @@ router.post("/register", [
 userController.registerUser
 );
 
+
 router.post('/login', [
     body('email').isEmail().withMessage("Invalid Email ok not"),
     body('password').isLength({ min: 6 }).withMessage('password must be at least 6 character long')
@@ -23,6 +24,7 @@ router.post('/login', [
 router.get('/profile', authMiddleware.authUser, userController.getUserProfile);
 
 router.get('/logout', authMiddleware.authUser, userController.logoutUser);
+
 
 // OTP Routes
 router.post('/send-otp', async (req, res) => {
