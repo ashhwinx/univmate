@@ -20,12 +20,12 @@ const Signup = () => {
 
   const sendOtp = async () => {
   try {
-   
+    console.log("Sending OTP to email:", email); // Debug log
     await axios.post(`${import.meta.env.VITE_BASE_URL}/users/send-otp`, { email }); // Wrap email in an object
     setIsOtpSent(true);
-    alert("OTP sent to your email, Check SPAM Folder");
+    alert("OTP sent to your email");
   } catch (error) {
-   
+    console.error("Error sending OTP:", error.response ? error.response.data : error.message); // Log error details
     alert("Failed to send OTP. Please check your email and try again.");
   }
 };

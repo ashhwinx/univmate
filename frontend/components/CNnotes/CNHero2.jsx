@@ -127,7 +127,6 @@ const pdfUrls = {
 
 const CNHero2 = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-   console.log(activeIndex)
   const containerRef = useRef(null);
   const selectorRef = useRef(null);
 

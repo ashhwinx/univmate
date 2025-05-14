@@ -68,6 +68,8 @@ const Start = () => {
           )}
         </AnimatePresence>
       </div>
+
+      
       {/* Hero Section */}
       <div className="relative w-full h-[calc(100vh-240px)] overflow-hidden">
         <img
@@ -138,7 +140,15 @@ const Start = () => {
             Privacy
           </a>
         </div>
-      </footer>   
+      </footer>
+
+      
+
+      
+      
+       
+
+      
     </div>
   );
 };
