@@ -23,7 +23,7 @@ const Navbar = () => {
       }).then((response)=>{
         if(response.status===200){
           localStorage.removeItem('token')
-          navigate('/login')
+          navigate('/')
         }
       })
 
@@ -34,9 +34,6 @@ const Navbar = () => {
       alert('Failed to logout. Please try again.');
     }
   };
-
-
-
 
   return (
     <>
@@ -49,7 +46,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex gap-5 text-[18px] text-white font-semibold">
+          <div className="hidden md:flex gap-5 text-[19px] text-white font-semibold">
             {["Class Notes", "Lab Work", "PYQ", "Syllabus","Chat Bot"].map((item, i) => (
               <Link
                 to={`/${item.toLowerCase().replace(" ", "")}`}
