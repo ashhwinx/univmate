@@ -1,5 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import ChatBotMenu from "./ChatBotMenu";
+import { Link } from "react-router-dom";
 
 const UnitPDFViewer = () => {
   const location = useLocation();
@@ -14,6 +16,14 @@ const UnitPDFViewer = () => {
 
   return (
     <div className="w-full h-screen bg-gray-100">
+      <ChatBotMenu />
+      <Link 
+        to="/home" 
+        className="fixed top-4 right-4 z-50 hover:scale-110 transition-transform"
+      >
+        <p className="text-2xl text-white bg-transparent">🏠︎</p>
+      </Link>
+      {/* Header */}
       <div className="p-4 bg-[#004aad] text-white">
         <h1 className="text-xl font-bold">{subject}</h1>
         <p className="text-sm">{unit}</p>

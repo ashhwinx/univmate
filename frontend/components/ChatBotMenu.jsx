@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { MessageCircle, X } from "lucide-react";
-import ChatBotHero from "./ChatBotHero"; // Apne file path ke hisaab se adjust kar lo
+import ChatBotHero from "../components/chat/ChatBotHero"; // Apne file path ke hisaab se adjust kar lo
 
 const ChatBotToggle = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);

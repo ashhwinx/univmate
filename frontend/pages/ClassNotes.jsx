@@ -4,6 +4,7 @@ import CNHero from '../components/CNnotes/CNHero';
 import CNHero2 from '../components/CNnotes/CNHero2';
 import { UserDataContext } from "../src/context/UserContext";
 import { useNavigate } from 'react-router-dom';
+import ChatBotMenu from "../components/ChatBotMenu";
 
 const ClassNotes = () => {
   const { user } = useContext(UserDataContext);
@@ -20,6 +21,7 @@ useEffect(() => {
   return (
     <>
     <Navbar/>
+    <ChatBotMenu/>
     {user.section=="A"?<CNHero/>:<CNHero2/>}
     </>
   )

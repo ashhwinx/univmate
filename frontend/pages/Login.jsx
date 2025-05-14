@@ -60,6 +60,12 @@ const Login = () => {
 
   return (
     <div>
+      <Link 
+        to="/" 
+        className="fixed top-4 right-4 z-50 hover:scale-110 transition-transform"
+      >
+        <p className="text-2xl text-white bg-transparent">🏠︎</p>
+      </Link>
       <form onSubmit={submitHandler}>
         <div className="h-screen w-screen bg-[#111]">
           <div className="h-screen w-screen flex justify-center items-center">

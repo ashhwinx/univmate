@@ -12,7 +12,7 @@ const subjects = [
 
 // Add this after the subjects array
 const subjectUnits = {
-  "Engineering Mathematics - I": [
+  "Engineering Mathematics - II": [
     "Matrices and Linear Equations",
     "Calculus",
     "Multiple Integrals",
@@ -55,7 +55,7 @@ const subjectUnits = {
 };
 // Add this after subjectUnits object
 const pdfUrls = {
-  "Engineering Mathematics - I": {
+  "Engineering Mathematics - II": {
     "Matrices and Linear Equations": "https://drive.google.com/file/d/1_eDxUT4ZakU-9Q_Q77f_mfznpUJRcqlg/preview?embedded=true&rm=minimal",
 
     "Calculus": "https://drive.google.com/file/d/YOUR_PDF_ID/preview?embedded=true&rm=minimal",

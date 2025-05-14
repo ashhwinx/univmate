@@ -4,6 +4,7 @@ import Background1 from "../components/home/Background 1.png";
 import Background2 from "../components/home/Background 2.png";
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/home/Navbar';
+import ChatBotMenu from "../components/ChatBotMenu";
 
 
 const Home = () => {
@@ -24,6 +25,7 @@ useEffect(() => {
     <div className="h-screen w-full bg-gradient-to-br from-[#0e0e0e] to-[#1f1f1f] text-white font-[Poppins] overflow-hidden">
       {/* Navbar */}
       <Navbar/>
+      <ChatBotMenu/>
       
       {/* Hero Section */}
       <div className="relative w-full h-[calc(100vh-240px)] overflow-hidden">

@@ -80,6 +80,12 @@ const Signup = () => {
 
   return (
     <div className="min-h-screen bg-[#111] flex items-center justify-center p-4">
+      <Link 
+        to="/" 
+        className="fixed top-4 right-4 z-50 hover:scale-110 transition-transform"
+      >
+        <p className="text-2xl text-white bg-transparent">🏠︎</p>
+      </Link>
       <form onSubmit={submitHandler} className="w-full max-w-md">
         <motion.div
           className="bg-[#84ACD8] rounded-xl px-6 py-8 sm:p-10"
