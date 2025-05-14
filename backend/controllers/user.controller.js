@@ -1,7 +1,7 @@
 const userModel = require('../model/user.model');
-const userService = require('../services/user.service')
-const {validationResult}=require('express-validator')
-const blacklistTokenModel = require("../model/blacklistToken.model")
+const userService = require('../services/user.service');
+const {validationResult}=require('express-validator');
+const blacklistTokenModel = require("../model/blacklistToken.model");
 
 
 module.exports.registerUser= async (req,res,next)=>{
@@ -55,6 +55,8 @@ module.exports.loginUser= async (req,res,next)=>{
     if(!isMatch){
        return res.send(401).json({message:'invalid  email or passowrd'})
     }
+
+
     
 
     const token = user.generateAuthToken();
@@ -70,12 +72,24 @@ module.exports.getUserProfile= async (req,res,next)=>{
 }
 
 
-module.exports.logoutUser = async (req,res,next)=>{
-  res.clearCookie('token');
- 
-  const token = req.cookies.token || req.headers.authorization.split('')[1];
+module.exports.logoutUser = async (req, res, next) => {
+  try {
+    const token = req.cookies.token || req.headers.authorization?.split(' ')[1];
+    
+    if (!token) {
+      return res.status(400).json({ message: 'No token found' });
+    }
 
-  await blacklistTokenModel.create({token})
+    // Clear the cookie
+    res.clearCookie('token');
 
-  res.status(200).json({message:'Logged out'})
+    // Blacklist the token
+    await blacklistTokenModel.create({ token });
+
+    res.status(200).json({ message: 'Logged out successfully' });
+  } catch (error) {
+    console.error('Logout error:', error);
+    res.status(500).json({ message: 'Error during logout' });
+  }
 }
+

@@ -7,7 +7,7 @@ import Background2 from "../components/home/Background 2.png";
 
 
 
-const Home = () => {
+const Start = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
 
@@ -24,7 +24,7 @@ const Home = () => {
           <div className="hidden md:flex gap-8 text-[18px] font-semibold">
             {["Class Notes", "Lab Work", "PYQ", "Syllabus","Chat Bot"].map((item, i) => (
               <Link
-                to={`/${item.toLowerCase().replace(" ", "")}`}
+                to={"/login"}
                 className="hover:text-yellow-300 transition duration-300 ease-in-out transform hover:scale-105"
                 key={i}
               >
@@ -58,7 +58,7 @@ const Home = () => {
               {["Class Notes", "Lab Work", "PYQ", "Syllabus","Chat Bot"].map(
                 (item, i) => (
                     <Link
-                        to={`/${item.toLowerCase().replace(" ", "")}`}
+                        to={"/login"}
                         className="text-base font-semibold hover:text-gray-300"
                         key={i}>{item}</Link>
                   
@@ -108,7 +108,7 @@ const Home = () => {
       </div>
 
       {/* Footer */}
-      {/* <footer className="bg-[#0a51ae] h-[250px] text-center text-white ">
+      <footer className="bg-[#0a51ae] h-[250px] text-center text-white ">
         <h2 className="text-xl font-semibold py-2">Join UnivMate Today!</h2>
         <p className="text-sm text-gray-100 pb-4 ">
           Made with ❤️ by students, for students
@@ -138,10 +138,9 @@ const Home = () => {
             Privacy
           </a>
         </div>
-      </footer> */}
-
+      </footer>   
     </div>
   );
 };
 
-export default Home;
+export default Start;
